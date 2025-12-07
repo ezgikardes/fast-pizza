@@ -1,6 +1,10 @@
 
 function App() {
-  return;
+  return (
+    <div>
+      Hello Vite
+    </div>
+  )
 }
 
 export default App
