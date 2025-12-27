@@ -69,6 +69,7 @@ function CreateOrder() {
 
         <div>
           <input
+            className="w-6 h-6 accent-yellow-400 focus:ring focus:ring-yellow-400 focus:ring-offset-2"
             type="checkbox"
             name="priority"
             id="priority"
