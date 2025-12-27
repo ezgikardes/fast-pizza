@@ -80,7 +80,7 @@ function CreateOrder() {
 
         <div>
           <input type="hidden" name='cart' value={JSON.stringify(cart)} />
-          <button disabled={isSubmitting}>
+          <button disabled={isSubmitting} className="inline-block px-4 py-3 font-semibold tracking-wide uppercase transition-colors duration-300 bg-yellow-400 rounded-full text-stone-800 hover:bg-yellow-300 focus:outline-none focus:ring focus:ring-yellow-300 focus:bg-yellow-300 focus:ring-offset-2 disabled:cursor-not-allowed">
             {isSubmitting ? 'Placing order' : 'Order now'}
           </button>
         </div>
@@ -107,9 +107,11 @@ export async function action({ request }) {
   if (Object.keys(errors).length > 0) return errors;
 
   // If everything is okay, create a new order and redirect
-  const newOrder = await createOrder(order);
+  // const newOrder = await createOrder(order);
 
-  return redirect(`/order/${newOrder.id}`);
+  // return redirect(`/order/${newOrder.id}`);
+
+  return null;
 }
 
 export default CreateOrder;
